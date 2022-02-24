@@ -2,9 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 const Accordion=({items})=>{
-    const renderedItems=items.map(item=>{
+    const onTitleClick=(index)=>{
+        console.log('just clicked',index)
+    }
+    const renderedItems=items.map((item,index)=>{
         return <div key={item.title}>
-            <div className="title active">
+            <div 
+            className="title active"
+            onClick={()=>onTitleClick(index)}
+            >
             <i className="dropdown icon"></i>
             {item.title}
         </div>
