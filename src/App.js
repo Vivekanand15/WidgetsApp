@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Accordion from "./component/Accordion";
+import Search from './component/Search';
 
 const items=[
     {
@@ -20,6 +20,6 @@ const items=[
 export default()=>{
     return <div>
         <br/>
-        <Accordion items={items} />
+        <Search/>
     </div>
 }
