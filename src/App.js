@@ -1,25 +1,27 @@
-import React from 'react';
-import ReactDom from 'react-dom';
-import Accordion from "./component/Accordion";
-
-const items=[
+import { selectOptions } from '@testing-library/user-event/dist/select-options';
+import React, { useState } from 'react';
+import DropDown from './component/DropDown';
+import Translator from './component/Translator';
+;
+const options=[
     {
-        title:'What is react?',
-        content:'React is front-End fremawork,'
+        label:"the color is red",
+        value:"red"
     },
     {
-        title:'why you use React?',
-        content:'we use react in form of component'
+        label:"the color is green",
+        value:"green"
     },
     {
-        title:'why use react',
-        content:'Ract is most favorite library among users'
+        label:"the color is blue",
+        value:"blue"
     }
 ]
 
-export default()=>{
-    return <div>
-        <br/>
-        <Accordion items={items} />
-    </div>
-}
+export default ()=>{
+    return (
+        <div >
+            <Translator/>
+        </div>
+    );
+};
